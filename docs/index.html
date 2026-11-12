@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>문장에 답하다 | 역사 읽기</title>
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css?v=2">
 <script defer src="./config.js"></script>
-<script type="module" src="./app.js"></script>
+<script type="module" src="./app.js?v=2"></script>
 </head>
 <body>
 <header><div><span>역사 읽기 활동</span><strong>문장에 답하다</strong></div><div><p id="status" role="status"></p><button id="switch-room" type="button" hidden>학급 바꾸기</button></div></header>
@@ -19,7 +19,11 @@
 <div class="layout">
 <article aria-label="읽기 자료">
 <h2>읽기 자료</h2>
-<p class="muted">제공된 영상 스크립트에서 히틀러의 주장을 비판적으로 요약했어요. 원문 인용은 따로 사용하지 않았어요.</p>
+<p class="muted">영상에서 『나의 투쟁』을 소개하고 재연한 대목의 자막이에요. 반유대주의와 인종차별 표현이 등장합니다. 어떤 근거가 빠졌는지 살피며 읽어 보세요.</p>
+<div class="selection-bar">
+  <p class="muted">한 문단 안에서 반박할 구절을 드래그하세요.</p>
+  <button type="button" id="use-selection" disabled>선택한 구절에 댓글 남기기</button>
+</div>
 <div id="reading"></div>
 <a href="https://www.youtube.com/watch?v=4xbwBdyCE3Q">출처 영상 보기 ↗</a>
 </article>
@@ -31,8 +35,7 @@
 <button>입장하기</button>
 </form>
 <div id="discussion" hidden>
-<p id="prompt" class="muted">글에서 반박하고 싶은 구절을 드래그하고 ‘선택한 구절로 댓글 쓰기’를 눌러 보세요. 문단 끝 버튼으로 문단 전체를 고를 수도 있어요.</p>
-<button type="button" id="use-selection">선택한 구절로 댓글 쓰기</button>
+<p class="muted">같은 학급 친구들의 댓글이 여기에 올라와요.</p>
 <form id="compose" hidden>
 <blockquote id="picked"></blockquote>
 <label for="alias">별명</label>

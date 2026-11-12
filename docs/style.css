@@ -31,3 +31,10 @@ blockquote { margin:.5rem 0; padding:.4rem .8rem; border-left:3px solid #60947b;
 mark { background:#ffe19a; color:inherit; }
 #notice { color:#754229; }
 @media(max-width:740px) { .layout { grid-template-columns:1fr; } }
+
+.selection-bar { position:sticky; top:0; z-index:1; display:flex; gap:.5rem 1rem; flex-wrap:wrap; align-items:center; background:#fffdf8; padding:.7rem 0; border-block:1px solid var(--line); }
+.selection-bar p { margin:0; }
+.selection-bar button { background:var(--green); color:white; border-color:var(--green); }
+.selection-bar button:disabled { cursor:default; }
+#reading p { scroll-margin-top:6rem; }
+#reading p::selection { background:#b8e0cd; color:#172f25; }
