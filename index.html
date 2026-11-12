@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>문장에 답하다 | 역사 읽기</title>
+<link rel="stylesheet" href="./style.css?v=2">
+<script defer src="./config.js"></script>
+<script type="module" src="./app.js?v=2"></script>
+</head>
+<body>
+<header><div><span>역사 읽기 활동</span><strong>문장에 답하다</strong></div><div><p id="status" role="status"></p><button id="switch-room" type="button" hidden>학급 바꾸기</button></div></header>
+<main>
+<section class="intro">
+<p class="topic">『나의 투쟁』 비판적 읽기</p>
+<h1>어디에서 논리가<br>건너뛰었을까?</h1>
+<p>가장 납득하기 어려운 구절을 고르고, 그 주장이 왜 설득력이 없는지 댓글을 남겨 보세요.</p>
+</section>
+<div class="layout">
+<article aria-label="읽기 자료">
+<h2>읽기 자료</h2>
+<p class="muted">영상에서 『나의 투쟁』을 소개하고 재연한 대목의 자막이에요. 반유대주의와 인종차별 표현이 등장합니다. 어떤 근거가 빠졌는지 살피며 읽어 보세요.</p>
+<div class="selection-bar">
+  <p class="muted">한 문단 안에서 반박할 구절을 드래그하세요.</p>
+  <button type="button" id="use-selection" disabled>선택한 구절에 댓글 남기기</button>
+</div>
+<div id="reading"></div>
+<a href="https://www.youtube.com/watch?v=4xbwBdyCE3Q">출처 영상 보기 ↗</a>
+</article>
+<aside aria-label="학급 댓글">
+<h2>학급 댓글</h2>
+<form id="join" hidden>
+<label for="code">학급 참여 코드</label>
+<input id="code" required autocomplete="off" placeholder="선생님이 공유한 코드">
+<button>입장하기</button>
+</form>
+<div id="discussion" hidden>
+<p class="muted">같은 학급 친구들의 댓글이 여기에 올라와요.</p>
+<form id="compose" hidden>
+<blockquote id="picked"></blockquote>
+<label for="alias">별명</label>
+<input id="alias" maxlength="24" required placeholder="실명 대신 수업용 별명">
+<label for="body">나의 반박</label>
+<textarea id="body" rows="4" maxlength="1000" required placeholder="이 주장은 …을 전제로 하지만, … 때문에 설득력이 없다."></textarea>
+<button>댓글 남기기</button>
+</form>
+<div id="comments"></div>
+</div>
+<p id="notice" role="status"></p>
+</aside>
+</div>
+</main>
+</body>
+</html>
+
